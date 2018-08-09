@@ -4,24 +4,28 @@
   </div>
 </template>
 
+<script>
+export default {
+  
+}
+</script>
+
+
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+/*html {
+  overflow: hidden;
+  height: 100%;
 }
-#nav {
-  padding: 30px;
+body {
+  height: 100%;
 }
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
+/*#app {
+  height: 100%;
 }
-
-#nav a.router-link-exact-active {
-  color: #42b983;
+.application {
+  height: 100%;
 }
+.application--wrap{
+  height: 100%;
+}*/
 </style>
