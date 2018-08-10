@@ -15,9 +15,12 @@ requireModule.keys().forEach(fileName => {
 
 Vue.use(Vuex);
 
+//Set persistence plugin for vuex
+//See : https://github.com/championswimmer/vuex-persist
 const vuexLocal = new VuexPersistence({
   storage: window.localStorage,
-  modules: ['']
+  supportCircular: true,
+  modules:["core"]
 });
 
 export default new Vuex.Store({

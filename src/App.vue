@@ -5,27 +5,27 @@
 </template>
 
 <script>
-export default {
-  
-}
+  export default {
+
+  }
 </script>
 
 
 <style>
-/*html {
-  overflow: hidden;
-  height: 100%;
-}
-body {
-  height: 100%;
-}
-/*#app {
-  height: 100%;
-}
-.application {
-  height: 100%;
-}
-.application--wrap{
-  height: 100%;
-}*/
+  html {
+    overflow: hidden;
+  }
+
+  main.app-content {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+  }
+
+  .v-content__wrap {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    overflow-y: scroll;
+  }
 </style>

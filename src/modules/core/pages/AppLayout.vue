@@ -1,16 +1,17 @@
 <template>
     <v-app id="inspire">
-        <v-navigation-drawer v-model="drawer" fixed app class="elevation-4">
+        <v-navigation-drawer v-model="$store.state.core.sidebar.show" fixed app class="elevation-1" :mini-variant="$store.state.core.sidebar.mini">
             <v-toolbar flat>
-                <span class="title">Menu</span>
+                <v-icon medium v-if="$store.state.core.sidebar.status == 1">home</v-icon>
+                <span v-if="$store.state.core.sidebar.status == 2" class="title">Menu</span>
             </v-toolbar>
 
             <v-divider></v-divider>
 
-            <v-list dense>
+            <v-list>
                 <template v-for="(item, i) in items">
                     <v-layout v-if="item.heading" :key="i" row align-center>
-                        <v-flex >
+                        <v-flex>
                             <v-subheader v-if="item.heading">
                                 {{ item.heading }}
                             </v-subheader>
@@ -32,7 +33,7 @@
         </v-navigation-drawer>
 
         <v-toolbar fixed app>
-            <v-toolbar-side-icon @click.native="drawer = !drawer"></v-toolbar-side-icon>
+            <v-toolbar-side-icon @click.native="toggleSidebar"></v-toolbar-side-icon>
             <span class="title ml-3 mr-5">VueBase&nbsp;
                 <!-- <span class="text">Keep</span> -->
             </span>
@@ -55,7 +56,6 @@
     export default {
         name: "AppLayout",
         data: () => ({
-            drawer: null,
             items: [{
                     icon: 'lightbulb_outline',
                     text: 'Menu Item 1'
@@ -81,7 +81,10 @@
             ]
         }),
         methods: {
-            menuItemClick : (item) => {
+            toggleSidebar: function () {
+                this.$store.commit("core/toggleSidebar")
+            },
+            menuItemClick: (item) => {
                 console.log("Clicked : " + item.text);
             }
         }
@@ -89,5 +92,4 @@
 </script>
 
 <style>
-
 </style>
