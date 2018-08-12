@@ -34,7 +34,7 @@
 
         <v-toolbar fixed app>
             <v-toolbar-side-icon @click.native="toggleSidebar"></v-toolbar-side-icon>
-            <span class="title ml-3 mr-5">VueBase&nbsp;
+            <span class="title ml-3 mr-5">{{$t("app.name")}}&nbsp;
                 <!-- <span class="text">Keep</span> -->
             </span>
             <v-spacer></v-spacer>
