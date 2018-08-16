@@ -1,16 +1,21 @@
 import Vue from 'vue'
-import './plugins/vuetify'
-import App from './App.vue'
-import router from './router'
-import store from './store'
+
+import App from '@/App.vue'
+
+// Core
+import router from '@/router'
+import store from '@/store'
 import i18n from '@/i18n'
 
-Vue.config.productionTip = false
+// Plugins
+import '@/plugins/vuetify'
+import '@/plugins/validate'
 
-import eventBus from "@/utils/eventBus"
-eventBus.$on("test",()=>{
-  console.log("Event Test");
-})
+// Utils
+import "@/utils/eventBus"
+import "@/utils/http"
+
+Vue.config.productionTip = false
 
 new Vue({
   router,
