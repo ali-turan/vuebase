@@ -1,5 +1,4 @@
 import Vue from 'vue'
-
 import App from '@/App.vue'
 
 // Core
@@ -7,13 +6,8 @@ import router from '@/router'
 import store from '@/store'
 import i18n from '@/i18n'
 
-// Plugins
-import '@/plugins/vuetify'
-import '@/plugins/validate'
-
-// Utils
-import "@/utils/eventBus"
-import "@/utils/http"
+// Import Plugins, Utils And Directives
+import "@/loader"
 
 Vue.config.productionTip = false
 
